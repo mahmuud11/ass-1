@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css file/bootstrap.min.css">
+    <link rel="stylesheet" href="css file/style.css">
+</head>
+<body>
+   
+        <div class="container  mt-3">
+            <h1 class="text-center ">Bookmarker</h1>
+
+            <h2 class="text-center mt-5  " >Bookmark your favorite sites </h2>
+
+            <div class="data ">
+                <div class="mb-3   ">
+                    <label for="bookmark" class="form-label ">Site Name</label>
+                    <input type="text" class="form-control" id="bookmark" placeholder="Bookmark Name"
+                    oninput="validate(/^[\w]{3,20}$/,this.value,nameAlert,this)">
+                    
+                  </div>
+                  <p class="alert alert-danger d-none " id="nameAlert">must be right name sitee</p>
+
+
+                  <div class="mb-3 ">
+                    <label for="Website" class="form-label">Site URL</label>
+                    <input type="text" class="form-control" id="Website" placeholder="Website URL"
+
+                    oninput="validate(/^www.[\w]{3,20}.com$/,this.value,linkAlert,this)">
+                  </div>
+                  <p class="alert alert-danger d-none " id="linkAlert">must be www.namelink.com</p>
+        </div>
+
+        <div class="buttons d-flex justify-content-center align-items-center">
+          <button class="" onclick="submitWebsite()">Submit</button>
+        </div>
+        
+        </div>
+
+
+        <div class="container mt-3">
+          <table class="table">
+             <thead >
+              <tr>
+                  <th>index</th>
+                  <th>Website</th>
+                  <th>Visit</th>
+                  <th>Delete</th>
+                  
+              </tr>
+             </thead>
+                 
+               <tbody  id="box">
+
+                
+                     
+                  
+              </tbody> 
+          </table>
+      </div>
+    
+  
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
